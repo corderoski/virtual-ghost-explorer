@@ -135,6 +135,7 @@ namespace VGExplorerTool.Forms
         private void FileCreator_Load(object sender, EventArgs e)
         {
             this.Text = Program.AppName;
+            this.Icon = Helpers.ImagesHelper.GetAppIcon();
             //
             itemTreeView.ImageList = _imageList;
             itemTreeView.Font = new Font("Tahoma", 8, FontStyle.Regular);

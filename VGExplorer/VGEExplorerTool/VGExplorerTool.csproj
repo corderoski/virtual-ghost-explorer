@@ -46,6 +46,9 @@
   <PropertyGroup>
     <ManifestKeyFile>VGExplorerTool_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\logo_win.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -77,6 +80,7 @@
     </Compile>
     <Compile Include="Helpers\FileHelper.cs" />
     <Compile Include="Factory\NodeStringFactory.cs" />
+    <Compile Include="Helpers\ImagesHelper.cs" />
     <Compile Include="Helpers\JsonHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,6 +134,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\text.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_fav-toolbar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_win.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

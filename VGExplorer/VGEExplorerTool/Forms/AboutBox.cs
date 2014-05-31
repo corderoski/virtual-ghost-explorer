@@ -19,6 +19,7 @@ namespace VGExplorerTool.Forms
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;
+            this.Icon = Helpers.ImagesHelper.GetAppIcon();
         }
 
         #region Assembly Attribute Accessors

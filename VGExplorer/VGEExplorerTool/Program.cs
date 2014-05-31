@@ -18,7 +18,7 @@ namespace VGExplorerTool
             Application.Run(new Forms.FileCreator());
         }
 
-        internal const String AppName = "Virtual Ghost Explorer [Alpha]";
+        internal const String AppName = "Virtual Ghost Explorer [Beta]";
 
     }
 }
