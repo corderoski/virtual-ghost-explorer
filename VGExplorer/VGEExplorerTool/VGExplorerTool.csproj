@@ -7,8 +7,8 @@
     <ProjectGuid>{F0272E5C-3109-4CA0-956B-DF5466869EFC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VGEExplorerTool</RootNamespace>
-    <AssemblyName>VGEExplorerTool</AssemblyName>
+    <RootNamespace>VGExplorerTool</RootNamespace>
+    <AssemblyName>VGExplorerTool</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>VGExplorerTool.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E1D345FD2309C26927693A8C4480A0A95F807274</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>VGExplorerTool_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -79,10 +94,42 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="VGExplorerTool_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action_save.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_email.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_new.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data_delete.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_new.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_page.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_info.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

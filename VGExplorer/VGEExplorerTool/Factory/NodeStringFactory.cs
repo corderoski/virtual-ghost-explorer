@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using VGEExplorerTool.Entities;
+using VGExplorerTool.Entities;
 using System.IO;
 
-namespace VGEExplorerTool.Factory
+namespace VGExplorerTool.Factory
 {
 
     public class NodeStringFactory

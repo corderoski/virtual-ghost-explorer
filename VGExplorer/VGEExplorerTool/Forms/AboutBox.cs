@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace VGEExplorerTool.Forms
+namespace VGExplorerTool.Forms
 {
     partial class AboutBox : Form
     {

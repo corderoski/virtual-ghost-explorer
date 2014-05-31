@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 
-namespace VGEExplorerTool.Entities
+namespace VGExplorerTool.Entities
 {
 
     public class NodeString
@@ -30,8 +30,8 @@ namespace VGEExplorerTool.Entities
 
     public enum NodeStringType
     {
-        Folder,
-        File
+        Folder = 0,
+        File = 1
     }
 
 }

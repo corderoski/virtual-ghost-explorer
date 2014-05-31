@@ -4,12 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace VGEExplorerTool.Helpers
+namespace VGExplorerTool.Helpers
 {
     public class FileHelper
     {
 
-        public const String VGEFileFilter = "VGE File (*.vg)|*.vge";
+        public const String VGEFileFilter = "VGE File (*.vge)|*.vge";
 
         /// <summary>
         /// 
