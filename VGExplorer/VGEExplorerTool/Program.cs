@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace VGEExplorerTool
+namespace VGExplorerTool
 {
     static class Program
     {
@@ -18,7 +18,7 @@ namespace VGEExplorerTool
             Application.Run(new Forms.FileCreator());
         }
 
-        internal const String AppName = "Virtual Ghost Explorer";
+        internal const String AppName = "Virtual Ghost Explorer [Alpha]";
 
     }
 }

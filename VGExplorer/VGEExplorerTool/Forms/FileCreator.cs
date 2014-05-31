@@ -1,56 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using VGEExplorerTool.Entities;
-using VGEExplorerTool.Helpers;
+using VGExplorerTool.Entities;
+using VGExplorerTool.Helpers;
 
-namespace VGEExplorerTool.Forms
+namespace VGExplorerTool.Forms
 {
     public partial class FileCreator : Form
     {
 
-        NodeString _nodeString;
+        ICollection<NodeString> _nodeString;
+
+        ImageList _imageList;
 
         public FileCreator()
         {
             InitializeComponent();
+            _imageList = new ImageList();
+            _imageList.Images.Add(Properties.Resources.folder, Color.Transparent);
+            _imageList.Images.Add(Properties.Resources.text, Color.Transparent);
+
+            _nodeString = new Collection<NodeString>();
         }
 
         #region Functions
 
-        private TreeNode PaintNodes(NodeString node)
+        private void CleanObjects()
         {
-            var parent = new TreeNode
-                {
-                    Name = node.Name,
-                    Text = node.Name,
-                    Tag = node.Type
-                };
-
-            foreach (var child in node.Childs)
-            {
-                var innerChild = new TreeNode
-                    {
-                        Name = child.Name,
-                        Text = child.Name,
-                        Tag = child.Type
-                    };
-
-                if (child.Childs.Count > 0)
-                {
-                    innerChild = PaintNodes(child);
-                }
-
-                parent.Nodes.Add(innerChild);
-            }
-            return parent;
+            itemTreeView.Nodes.Clear();
+            _nodeString.Clear();
         }
-        
+
+
         [Obsolete]
         private NodeString GetNodeString(TreeNode node)
         {
@@ -102,8 +89,46 @@ namespace VGEExplorerTool.Forms
 
         }
 
-        #endregion
+        private TreeNode PaintNodes(NodeString node)
+        {
+            var parent = new TreeNode
+            {
+                Name = node.Name,
+                Text = node.Name,
+                Tag = node.Type,
+                ImageIndex = (int)node.Type,
+                SelectedImageIndex = (int)node.Type,
+            };
 
+            foreach (var child in node.Childs)
+            {
+                var innerChild = new TreeNode
+                {
+                    Name = child.Name,
+                    Text = child.Name,
+                    Tag = child.Type,
+                    ImageIndex = (int)child.Type,
+                    SelectedImageIndex = (int)child.Type,
+                };
+
+                if (child.Childs.Count > 0)
+                {
+                    innerChild = PaintNodes(child);
+                    
+                }
+
+                parent.Nodes.Add(innerChild);
+            }
+            return parent;
+        }
+
+        private void ShowOperationCompletedMessage()
+        {
+            MessageBox.Show(this, "The has operation been completed.", Program.AppName,
+                MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        #endregion
 
         #region Components Events
 
@@ -111,64 +136,23 @@ namespace VGEExplorerTool.Forms
         {
             this.Text = Program.AppName;
             //
-            //this.itemTreeView.DrawMode = TreeViewDrawMode.OwnerDrawAll;
+            itemTreeView.ImageList = _imageList;
+            itemTreeView.Font = new Font("Tahoma", 8, FontStyle.Regular);
+            this.itemTreeView.DrawMode = TreeViewDrawMode.OwnerDrawAll;
         }
 
         private void itemTreeView_DrawNode(object sender, DrawTreeNodeEventArgs e)
         {
-            Font tagFont = itemTreeView.Font;
+            Font font = itemTreeView.Font;
 
-            // Draw the background and node text for a selected node. 
-            if ((e.State & TreeNodeStates.Selected) != 0)
-            {
-                e.DrawDefault = true;
+            e.DrawDefault = true;
 
-                //// Draw the background of the selected node. The NodeBounds 
-                //// method makes the highlight rectangle large enough to 
-                //// include the text of a node tag, if one is present.
-                //e.Graphics.FillRectangle(Brushes.Transparent, NodeBounds(e.Node));
-
-                ////// Retrieve the node font. If the node font has not been set, 
-                ////// use the TreeView font.
-                //Font nodeFont = e.Node.NodeFont;
-                //if (nodeFont == null) nodeFont = ((TreeView)sender).Font;
-
-                // Draw the node text.
-                e.Graphics.DrawString(e.Node.Text, tagFont, Brushes.White,
-                    Rectangle.Inflate(e.Bounds, 2, 0));
-            }
-            // Use the default background and node text. 
-            else
-            {
-                e.DrawDefault = true;
-            }
-
-            // If a node tag is present, draw its string representation  
-            // to the right of the label text. 
-            if (e.Node.Tag != null)
-            {
-                e.Graphics.DrawString(e.Node.Tag.ToString(), tagFont,
-                    Brushes.Yellow, e.Bounds.Right + 2, e.Bounds.Top);
-            }
-
-            // If the node has focus, draw the focus rectangle large, making 
-            // it large enough to include the text of the node tag, if present. 
-            if ((e.State & TreeNodeStates.Focused) != 0)
-            {
-                using (Pen focusPen = new Pen(Color.Black))
-                {
-                    focusPen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-                    Rectangle focusBounds = NodeBounds(e.Node);
-                    focusBounds.Size = new Size(focusBounds.Width - 1,
-                    focusBounds.Height - 1);
-                    e.Graphics.DrawRectangle(focusPen, focusBounds);
-                }
-            }
+           
         }
 
         #region Menu Items
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (var openFileDialog = new OpenFileDialog())
             {
@@ -181,28 +165,31 @@ namespace VGEExplorerTool.Forms
                 openFileDialog.Filter = FileHelper.VGEFileFilter;
                 //  Operation
                 var dResult = openFileDialog.ShowDialog(this);
-
                 if (dResult != System.Windows.Forms.DialogResult.OK)
                     return;
 
                 var content = FileHelper.OpenStream(openFileDialog.FileName);
+                var result = JsonHelper.DeserializeArray(content);
 
-                _nodeString = JsonHelper.Deserialize(content);
-
-                if (_nodeString == null)
+                if (result == null)
                 {
-                    MessageBox.Show(this, "The indicated file is empty. Virtual Exploring can't be loaded.", "Error",
+                    MessageBox.Show(this, "The indicated file is empty. Virtual Exploring can't be loaded.",
+                        Program.AppName + " - Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                itemTreeView.Nodes.Clear();
-                itemTreeView.Nodes.Add(PaintNodes(_nodeString));
+                CleanObjects();
+                foreach (var resultItem in result)
+                {
+                    itemTreeView.Nodes.Add(PaintNodes(resultItem));
+                    _nodeString.Add(resultItem);
+                }
                 //
-                MessageBox.Show(this, "Operation Completed!");
+                this.ShowOperationCompletedMessage();
             }
         }
-        
+
         private void openFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (var folderDialog = new FolderBrowserDialog())
@@ -213,12 +200,32 @@ namespace VGEExplorerTool.Forms
                 if (dResult != System.Windows.Forms.DialogResult.OK)
                     return;
 
-                _nodeString = Factory.NodeStringFactory.CreateNodeString(folderDialog.SelectedPath);
+                var result = Factory.NodeStringFactory.CreateNodeString(folderDialog.SelectedPath);
 
-                itemTreeView.Nodes.Clear();
-                itemTreeView.Nodes.Add(PaintNodes(_nodeString));
+                CleanObjects();
+                itemTreeView.Nodes.Add(PaintNodes(result));
+                _nodeString.Add(result);
                 //
-                MessageBox.Show(this, "Operation Completed!");
+                this.ShowOperationCompletedMessage();
+            }
+        }
+
+        private void addFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var folderDialog = new FolderBrowserDialog())
+            {
+                folderDialog.ShowNewFolderButton = true;
+                var dResult = folderDialog.ShowDialog(this);
+
+                if (dResult != System.Windows.Forms.DialogResult.OK)
+                    return;
+
+                var result = Factory.NodeStringFactory.CreateNodeString(folderDialog.SelectedPath);
+
+                itemTreeView.Nodes.Add(PaintNodes(result));
+                _nodeString.Add(result);
+                //
+                this.ShowOperationCompletedMessage();
             }
         }
 
@@ -237,11 +244,11 @@ namespace VGEExplorerTool.Forms
 
                 if (dResult != System.Windows.Forms.DialogResult.OK)
                     return;
-                
+
                 var content = JsonHelper.Serialize(_nodeString);
                 FileHelper.SaveStream(saveFolderDialog.FileName, content);
                 //
-                MessageBox.Show(this, "Operation Completed!");
+                this.ShowOperationCompletedMessage();
             }
         }
 
@@ -252,8 +259,7 @@ namespace VGEExplorerTool.Forms
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _nodeString = null;
-            itemTreeView.Nodes.Clear();
+            CleanObjects();
         }
 
         private void contactToolStripMenuItem_Click(object sender, EventArgs e)
@@ -270,6 +276,7 @@ namespace VGEExplorerTool.Forms
         }
 
         #endregion
+
 
         #endregion
 
