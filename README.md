@@ -10,7 +10,7 @@ La finalidad es poder compartir con otros las estructuras de nuestras carpetas. 
 * VGExplorer Tool
 * vAlpha 0.1
 
-** Distribuciones / Aplicativos: ** http://vgexplorer.sourceforge.net
+** Distribuciones / Aplicativos: ** https://sourceforge.net/p/vgexplorer/
 
 ### Funciones ###
 
@@ -62,4 +62,3 @@ A los Testers:
 
 Íconos:
 http://www.famfamfam.com/lab/icons/mini/
-
