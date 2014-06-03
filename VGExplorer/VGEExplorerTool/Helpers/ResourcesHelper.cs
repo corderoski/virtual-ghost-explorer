@@ -6,7 +6,7 @@ using System.Text;
 
 namespace VGExplorerTool.Helpers
 {
-    public class ImagesHelper
+    public class ResourcesHelper
     {
 
 

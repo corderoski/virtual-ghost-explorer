@@ -11,6 +11,29 @@ namespace VGExplorerTool.Helpers
 
         public const String VGEFileFilter = "VGE File (*.vge)|*.vge";
 
+        private const String VGE_CONF_FILE = "vge.ini";
+
+
+        
+        internal static Entities.Configuration GetAppConfiguration()
+        {
+            var file = Environment.CurrentDirectory + Path.DirectorySeparatorChar + VGE_CONF_FILE;
+            Entities.Configuration obj = null;
+
+            if (!File.Exists(file))
+            {
+                obj = new Entities.Configuration();
+                File.WriteAllText(file, JsonHelper.Serialize(obj));
+                return obj;
+            }
+
+            var content = File.ReadAllText(file);
+            obj = JsonHelper.Deserialize<Entities.Configuration>(content);
+
+            return obj;
+        }
+
+
         /// <summary>
         /// 
         /// </summary>

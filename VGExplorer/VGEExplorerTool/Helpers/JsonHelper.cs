@@ -10,9 +10,9 @@ namespace VGExplorerTool.Helpers
     public class JsonHelper
     {
 
-        public static String Serialize(NodeString nodeString)
+        public static String Serialize(Object obj)
         {
-            return JsonConvert.SerializeObject(nodeString, Formatting.Indented);
+            return JsonConvert.SerializeObject(obj, Formatting.Indented);
         }
 
         public static String Serialize(IEnumerable<NodeString> nodeString)
@@ -20,12 +20,17 @@ namespace VGExplorerTool.Helpers
             return JsonConvert.SerializeObject(nodeString, Formatting.Indented);
         }
 
-        public static NodeString Deserialize(String nodeStringContent)
+        public static T Deserialize<T>(String content) where T : class
+        {
+            return JsonConvert.DeserializeObject<T>(content);
+        }
+
+        public static NodeString DeserializeNodeString(String nodeStringContent)
         {
             return JsonConvert.DeserializeObject<NodeString>(nodeStringContent);
         }
 
-        public static IEnumerable<NodeString> DeserializeArray(String nodeStringContent)
+        public static IEnumerable<NodeString> DeserializeNodeStringArray(String nodeStringContent)
         {
             try
             {

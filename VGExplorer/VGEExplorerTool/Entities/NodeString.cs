@@ -21,6 +21,8 @@ namespace VGExplorerTool.Entities
 
         public ICollection<NodeString> Childs { get; set; }
 
+        public String Size { get; set; }
+
         public override string ToString()
         {
             return String.Format("{0} - {1}", Name, Type);
