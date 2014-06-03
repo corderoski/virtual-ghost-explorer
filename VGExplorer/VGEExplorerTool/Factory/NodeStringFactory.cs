@@ -16,7 +16,7 @@ namespace VGExplorerTool.Factory
         /// </summary>
         /// <param name="folderPath">The folder's path for ripping.</param>
         /// <returns>a NodeString representing the the folder's virtual structure</returns>
-        internal static NodeString CreateNodeString(string folderPath)
+        public static NodeString CreateNodeString(string folderPath)
         {
             var folder = new DirectoryInfo(folderPath);
 
@@ -33,6 +33,7 @@ namespace VGExplorerTool.Factory
                     Name = itemNode.Name,
                     Type = NodeStringType.Folder
                 };
+
                 try
                 {
                     if (itemNode.GetFiles().Count() > 0 || itemNode.GetDirectories().Count() > 0)
@@ -59,6 +60,35 @@ namespace VGExplorerTool.Factory
             }
             return result;
         }
+
+        /// <summary>
+        /// Creates or replicates a folder's schema given a NodeString
+        /// </summary>
+        /// <param name="rootFolder">a root folder</param>
+        /// <param name="nodes">NodeStrins containing the schema</param>
+        public static void CreateFolderSchema(string rootFolder, IEnumerable<NodeString> nodes)
+        {
+            rootFolder += Path.DirectorySeparatorChar;
+
+            foreach (var nodeString in nodes.Where(p => p.Type == NodeStringType.Folder))
+            {
+                //  Principal Folder
+                Directory.CreateDirectory(rootFolder + nodeString.Name);
+                //  Filter, there could be files...
+                foreach (var itemNode in nodeString.Childs.Where(p => p.Type == NodeStringType.Folder))
+                {
+                    Directory.CreateDirectory(rootFolder + nodeString.Name + Path.DirectorySeparatorChar + itemNode.Name);
+
+                    if (itemNode.Childs.Any(p => p.Type == NodeStringType.Folder))
+                    {
+                        CreateFolderSchema(rootFolder + nodeString.Name + Path.DirectorySeparatorChar + itemNode.Name, itemNode.Childs);
+                    }
+
+                }// end-inner foreach
+            }// end-outer foreach
+
+        }
+
 
     }
 }
