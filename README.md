@@ -2,28 +2,22 @@
 
 Básicamente consiste en una herramienta que permite compartir las estructuras de las carpetas.
 
-La finalidad es poder compartir con otros las estructuras de nuestras carpetas. Permitirle saber a un amigo si tenemos o no el álbum de un artista, la grabación del último episodio de una serie o sólo por hacer alarde de nuestras habilidades de organización XD
+La finalidad es poder compartir con otros las estructuras de nuestras carpetas (esquemas). Permitirle saber a un amigo si tenemos o no el álbum de un artista, la grabación del último episodio de una serie o sólo por hacer alarde de nuestras habilidades de organización XD
 
 
 ## Virtual Ghost Explorer ##
 
 * VGExplorer Tool
-* vAlpha 0.1
+* v 0.9 RC 1
 
 ** Distribuciones / Aplicativos: ** https://sourceforge.net/p/vgexplorer/
 
 ### Funciones ###
 
-* Lectura (Ripping) de mùltiples carpetas
-* Diferenciación de carpetas y archivos
-* Creación de archivos (**.vge*) propios de la aplicación
-* Lectura de archivos creado por terceros
-
-** Próximas funcionalidades **
-
-* Información básica de archivos (tamaño, fecha de creación)
-* Diferenciar nuevos cambios (al leer archivo y adicionar carpetas para volver a guardar)
-
+* Lectura (Ripping) de carpetas para creación de esquema
+* Visualización de carpetas y archivos de un esquema
+* Archivos propietarios (**.vge*) para la Exportación / Importación de esquemas
+* Creación de replica de esquemas (recrear estructura)
 
 
 ## Repositorio ##
