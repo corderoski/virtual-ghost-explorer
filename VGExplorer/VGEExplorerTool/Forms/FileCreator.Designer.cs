@@ -86,7 +86,7 @@
             // 
             this.openToolStripMenuItem.Image = global::VGExplorerTool.Properties.Resources.page_new;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.openToolStripMenuItem.Text = "Open File";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
             // 
@@ -94,54 +94,58 @@
             // 
             this.openFolderToolStripMenuItem.Image = global::VGExplorerTool.Properties.Resources.folder_page;
             this.openFolderToolStripMenuItem.Name = "openFolderToolStripMenuItem";
-            this.openFolderToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.openFolderToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.openFolderToolStripMenuItem.Text = "&Open Folder";
+            this.openFolderToolStripMenuItem.ToolTipText = "Opens and show a folder.";
             this.openFolderToolStripMenuItem.Click += new System.EventHandler(this.openFolderToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(150, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(164, 6);
             // 
             // addFolderToolStripMenuItem
             // 
             this.addFolderToolStripMenuItem.Image = global::VGExplorerTool.Properties.Resources.folder_new;
             this.addFolderToolStripMenuItem.Name = "addFolderToolStripMenuItem";
-            this.addFolderToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.addFolderToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.addFolderToolStripMenuItem.Text = "Add Folder";
+            this.addFolderToolStripMenuItem.ToolTipText = "Adds a folder to the working schema.";
             this.addFolderToolStripMenuItem.Click += new System.EventHandler(this.addFolderToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(150, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(164, 6);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Image = global::VGExplorerTool.Properties.Resources.action_save;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.ToolTipText = "Save the working schema.";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // createSchemaToolStripMenuItem
             // 
             this.createSchemaToolStripMenuItem.Image = global::VGExplorerTool.Properties.Resources.icon_package_get;
             this.createSchemaToolStripMenuItem.Name = "createSchemaToolStripMenuItem";
-            this.createSchemaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.createSchemaToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.createSchemaToolStripMenuItem.Text = "Replicate Schema";
+            this.createSchemaToolStripMenuItem.ToolTipText = "Recreates the working schema.";
             this.createSchemaToolStripMenuItem.Click += new System.EventHandler(this.createSchemaToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(150, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(164, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = global::VGExplorerTool.Properties.Resources.exit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -157,7 +161,7 @@
             // 
             this.clearToolStripMenuItem.Image = global::VGExplorerTool.Properties.Resources.data_delete;
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.clearToolStripMenuItem.Text = "Clear / Delete";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
@@ -218,7 +222,7 @@
             this.groupBox.Size = new System.Drawing.Size(617, 415);
             this.groupBox.TabIndex = 1;
             this.groupBox.TabStop = false;
-            this.groupBox.Text = "Navigation";
+            this.groupBox.Text = "Working Schema";
             // 
             // itemTreeView
             // 

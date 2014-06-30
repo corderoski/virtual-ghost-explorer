@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using VGExplorerTool.Entities;
 using VGExplorerTool.Helpers;
@@ -29,7 +26,7 @@ namespace VGExplorerTool.Forms
             _imageList.Images.Add(Properties.Resources.text, Color.Transparent);
 
             _nodeString = new Collection<NodeString>();
-            _appConfiguration = FileHelper.GetAppConfiguration();
+            //-_appConfiguration = FileHelper.GetAppConfiguration();
         }
 
         
@@ -37,7 +34,6 @@ namespace VGExplorerTool.Forms
 
         private void FileCreator_Load(object sender, EventArgs e)
         {
-            //
             this.optionsToolStripMenuItem.Visible = false;  //  for next deploy
             //
             this.Text = Program.AppName;
@@ -182,17 +178,24 @@ namespace VGExplorerTool.Forms
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CleanObjects();
+            var selection = itemTreeView.SelectedNode;
+            if (selection == null)
+                CleanObjects();
+            else
+                DeleteObject();
         }
 
         private void configurationToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /*
+             * No need for using configurations yet.
             var frm = new Configuration();
             var dResult = frm.ShowDialog(this);
             if (dResult == System.Windows.Forms.DialogResult.OK)
             {
                 _appConfiguration = FileHelper.GetAppConfiguration();
             }
+             * */
         }
 
         private void contactToolStripMenuItem_Click(object sender, EventArgs e)
@@ -209,11 +212,10 @@ namespace VGExplorerTool.Forms
         }
 
         #endregion
-
-
-
+        
 
         #endregion
+
 
         #region Functions
 
@@ -223,6 +225,11 @@ namespace VGExplorerTool.Forms
             _nodeString.Clear();
         }
 
+
+        private void DeleteObject()
+        {
+            throw new NotImplementedException();
+        }
 
         [Obsolete]
         private NodeString GetNodeString(TreeNode node)
@@ -275,7 +282,6 @@ namespace VGExplorerTool.Forms
                 if (child.Childs.Count > 0)
                 {
                     innerChild = PaintNodes(child);
-
                 }
 
                 parent.Nodes.Add(innerChild);
@@ -290,7 +296,6 @@ namespace VGExplorerTool.Forms
         }
 
         #endregion
-
 
 
     }
