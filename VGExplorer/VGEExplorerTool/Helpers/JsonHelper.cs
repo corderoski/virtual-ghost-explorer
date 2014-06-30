@@ -25,11 +25,6 @@ namespace VGExplorerTool.Helpers
             return JsonConvert.DeserializeObject<T>(content);
         }
 
-        public static NodeString DeserializeNodeString(String nodeStringContent)
-        {
-            return JsonConvert.DeserializeObject<NodeString>(nodeStringContent);
-        }
-
         public static IEnumerable<NodeString> DeserializeNodeStringArray(String nodeStringContent)
         {
             try

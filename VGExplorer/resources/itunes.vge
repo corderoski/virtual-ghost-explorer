@@ -1,0 +1,1698 @@
+[
+  {
+    "Name": "iTunes",
+    "Type": 0,
+    "Childs": [
+      {
+        "Name": "Album Artwork",
+        "Type": 0,
+        "Childs": [
+          {
+            "Name": "Cache",
+            "Type": 0,
+            "Childs": [
+              {
+                "Name": "6F0254400CF688C2",
+                "Type": 0,
+                "Childs": [
+                  {
+                    "Name": "00",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "05",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "02",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-E329B5F86FEB3250.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          },
+                          {
+                            "Name": "13",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-7E2737BC02465D50.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "07",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "11",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-C35C7165A9B26B70.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "10",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "12",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-8E5AA3D4513ACCA0.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "14",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "04",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-DFE3D5076E9634E0.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "15",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "12",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-5D6057609D1F4CF0.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "01",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "01",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "15",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-679D0830C2EF2F11.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "10",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "14",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-A49D061C65588EA1.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "02",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "00",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "11",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-BFF159221A5FBB02.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "06",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "13",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-269EDDA6E3AD8D62.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              },
+                              {
+                                "Name": "6F0254400CF688C2-37AD1BA8B5CB7D62.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "12",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "10",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-A386DFB5AD65FAC2.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "03",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "03",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "11",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-F833298EE4BD2B33.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "04",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "06",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-8ADEB56F75235643.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "15",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "12",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-354CE8C95D386CF3.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "04",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "02",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "05",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-46F5A9DD3623A524.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "04",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "01",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-1660F24595A26144.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "06",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "09",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-DD70A47C76B43964.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "07",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "02",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-4049D282F8EF5274.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          },
+                          {
+                            "Name": "07",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-808FCAF6C9408774.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "11",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "07",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-927875FE5FE057B4.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "13",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "08",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-166FD5CDBE7768D4.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "15",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "14",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-11AE517DC1260EF4.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "05",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "00",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "04",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-FB0CEA177DE8A405.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "01",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "07",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-DC9C1D32D1ED9715.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "03",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "01",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-A5892DDF13E45135.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "05",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "09",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-8E5692D6D8CEB955.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "08",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "06",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-3EFFD0A8527CD685.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "06",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "04",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "03",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-39DBBA31CD117346.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "15",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "06",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-30E8F4AD524CA6F6.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "07",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "01",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "01",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-489192C55C21C117.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "03",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "03",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-8460718FDDE86337.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "10",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "00",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-5A91DCAEFEDDB0A7.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          },
+                          {
+                            "Name": "02",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-7C1ED504A7D672A7.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          },
+                          {
+                            "Name": "04",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-E5EB0431A3B284A7.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "14",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "15",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-0CD863B428A4CFE7.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "08",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "00",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "01",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-E0E1A11E3ACED108.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          },
+                          {
+                            "Name": "13",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-733155030AF73D08.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "03",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "12",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-65C44CE5D1095C38.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "06",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "08",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-C3C8587EB65CE868.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "08",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "05",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-EEBB9E5B716AB588.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "09",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "13",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "00",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-A74AC01710E850D9.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "14",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "10",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-B2C9BE1D1A3C6AE9.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "10",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "04",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "11",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-98A47ACE65280B4A.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "09",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "10",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-E261424BB94E9A9A.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "12",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "05",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-945CE9E1F1E1C5CA.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "11",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "00",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "12",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-CCE4480B3725AC0B.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "06",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "04",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-1C8328AC5612846B.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "08",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "13",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-FC6D271434AAED8B.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "14",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "05",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-38157F8C6DCAB5EB.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "12",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "04",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "14",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-F1104FE4175CFE4C.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "10",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "02",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-7BEC1CCCDF2EA2AC.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "13",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "14",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-030245382B449EDC.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "13",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "01",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "10",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-535703B7AC9A1A1D.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "08",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "12",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-2FA78863A0585C8D.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "11",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "00",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-AF92A78A66B950BD.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          },
+                          {
+                            "Name": "04",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-949B0CABC20E34BD.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "14",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "01",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "04",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-82504C910794C41E.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "02",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "14",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-22E45B70ED84DE2E.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "10",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "06",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-5BAD70AE4F1786AE.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              },
+                              {
+                                "Name": "6F0254400CF688C2-E7AFA1EBE353F6AE.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "12",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "08",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-C5B22243F47EA8CE.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "15",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "01",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "01",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-7EDBC9830A5E511F.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "02",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "01",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-9CD9753F7D50912F.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "09",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "12",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-48A86AFEC890DC9F.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      },
+                      {
+                        "Name": "12",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "13",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-A71A135FC7EB6DCF.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  }
+                ],
+                "Size": null
+              }
+            ],
+            "Size": null
+          },
+          {
+            "Name": "Download",
+            "Type": 0,
+            "Childs": [
+              {
+                "Name": "6F0254400CF688C2",
+                "Type": 0,
+                "Childs": [
+                  {
+                    "Name": "04",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "14",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "09",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-CF48D6C13D7D59E4.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "08",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "08",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "05",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-EEBB9E5B716AB588.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  },
+                  {
+                    "Name": "13",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "11",
+                        "Type": 0,
+                        "Childs": [
+                          {
+                            "Name": "00",
+                            "Type": 0,
+                            "Childs": [
+                              {
+                                "Name": "6F0254400CF688C2-AF92A78A66B950BD.itc2",
+                                "Type": 1,
+                                "Childs": [],
+                                "Size": null
+                              }
+                            ],
+                            "Size": null
+                          }
+                        ],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  }
+                ],
+                "Size": null
+              }
+            ],
+            "Size": null
+          }
+        ],
+        "Size": null
+      },
+      {
+        "Name": "iTunes Media",
+        "Type": 0,
+        "Childs": [
+          {
+            "Name": "Añadir automáticamente a iTunes",
+            "Type": 0,
+            "Childs": [],
+            "Size": null
+          },
+          {
+            "Name": "Downloads",
+            "Type": 0,
+            "Childs": [
+              {
+                "Name": "Podcasts",
+                "Type": 0,
+                "Childs": [
+                  {
+                    "Name": "Tiësto_Tiësto`s Club Life Podcast 1.tmp",
+                    "Type": 0,
+                    "Childs": [
+                      {
+                        "Name": "Thumbs.db",
+                        "Type": 1,
+                        "Childs": [],
+                        "Size": null
+                      }
+                    ],
+                    "Size": null
+                  }
+                ],
+                "Size": null
+              }
+            ],
+            "Size": null
+          },
+          {
+            "Name": "Podcasts",
+            "Type": 0,
+            "Childs": [
+              {
+                "Name": "ItalianGroove House Chart",
+                "Type": 0,
+                "Childs": [
+                  {
+                    "Name": "AlbumArtSmall.jpg",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "E.P.103-ITALIANGROOVE-HOUSE-CHART.m4a",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "E.P.107-ITALIANGROOVE-HOUSE-CHART.m4a",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "E.P.109-ITALIANGROOVE-HOUSE-CHART.m4a",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "E.P.110-ITALIANGROOVE-HOUSE-CHART.m4a",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "E.P.111-ITALIANGROOVE-HOUSE-CHART.m4a",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "Folder.jpg",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "Thumbs.db",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  }
+                ],
+                "Size": null
+              },
+              {
+                "Name": "Tiësto`s Club Life Podcast",
+                "Type": 0,
+                "Childs": [
+                  {
+                    "Name": "Thumbs.db",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "Tiësto 1.m4a",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "Tiësto 2.m4a",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "Tiësto 3.m4a",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "Tiësto 4.m4a",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "Tiësto.m4a",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "Tiësto`s club life podcast 358.m4a",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "Tiësto`s club life podcast 364.m4a",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "Tiësto`s club life podcast 366.m4a",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "Tiësto`s club life podcast 367.m4a",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  },
+                  {
+                    "Name": "Tiësto`s club life podcast 368.m4a",
+                    "Type": 1,
+                    "Childs": [],
+                    "Size": null
+                  }
+                ],
+                "Size": null
+              }
+            ],
+            "Size": null
+          },
+          {
+            "Name": ".iTunes Preferences.plist",
+            "Type": 1,
+            "Childs": [],
+            "Size": null
+          }
+        ],
+        "Size": null
+      },
+      {
+        "Name": "iTunes Library Extras.itdb",
+        "Type": 1,
+        "Childs": [],
+        "Size": null
+      },
+      {
+        "Name": "iTunes Library Genius.itdb",
+        "Type": 1,
+        "Childs": [],
+        "Size": null
+      },
+      {
+        "Name": "iTunes Library.itl",
+        "Type": 1,
+        "Childs": [],
+        "Size": null
+      },
+      {
+        "Name": "iTunes Music Library.xml",
+        "Type": 1,
+        "Childs": [],
+        "Size": null
+      },
+      {
+        "Name": "sentinel",
+        "Type": 1,
+        "Childs": [],
+        "Size": null
+      }
+    ],
+    "Size": null
+  }
+]

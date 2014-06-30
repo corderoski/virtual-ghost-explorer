@@ -1,0 +1,176 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>VGExplorador - Web</title>
+    @Styles.Render("~/Default/css")
+    @Styles.Render("~/Content/css")
+    <!-- Additional settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+        #viewer {
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            width: 100%;
+            height: 480px;
+            background-color: lightblue;
+        }
+
+        .loader {
+            width: 12%;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <header style="clear: both; margin-bottom: 5%;">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">VGExplorer</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                        <li><a href="#apps">Aplicaciones</a></li>
+                        <li><a href="#about">Acerca de</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "fileForm", enctype = "multipart/form-data" }))
+            {
+                <label for="fileControl" class="input-control">
+                    Cargar Archivo
+                </label>
+                <input id="fileControl" name="fileControl" class="input-control" type="file" value="Cargar" />
+                <div id="viewer">
+                    @if (ViewBag.Data == null)
+                    {
+                        <span>null</span>
+                    }
+                    else
+                    {
+                        <span>not null</span>
+                    }
+                </div>
+            }
+        </div>
+
+        <div class="container">
+            <h2>Virtual Ghost Explorer - Web</h2>
+
+            <div id="content-1" class="content">
+                <p>
+                    Consiste en una herramienta que permite compartir las estructuras de las carpetas sin el inconveniente del peso de la carpeta y sin accesos remotos.
+                </p>
+                <p>
+                    La finalidad es poder compartir con otros las vistas de nuestras carpetas (esquemas): 
+            Permitirle saber a un amigo si tenemos o no el álbum de un artista, la grabación del último episodio
+             de una serie o sólo por hacer alarde de nuestras habilidades de organización XD
+                </p>
+                <p>
+                    Éste sección Web te ayudará a visualizar las estructuras sin necesidad de software o contenido adicional. Sólo carga y visualiza en línea.
+                </p>
+            </div>
+
+            <div id="apps" class="content">
+                <h2>Aplicaciones para generar archivos VGE</h2>
+
+                <div class="">
+                    <h4>Windows</h4>
+                    <p>
+                        Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. 
+                Sed arcu. Cras consequat.
+                <a href="http://www.softpedia.com/get/System/File-Management/Virtual-Ghost-Explorer.shtml">Descargar</a>
+                    </p>
+                </div>
+                <div class="">
+                    <h4>Windows 8 (Store App)</h4>
+                    <label class="label label-info">En Desarrollo.</label>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
+                 Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. 
+                Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                    </p>
+                </div>
+            </div>
+
+
+            <div id="about">
+                <h2>Acerca de</h2>
+                <p>
+                    Éste proyecto surge con la iniciativa de dotar el mercado de aplicaciones de diferentes plataformas
+        (Windows Phone, Android, BlackBerry 10 & iOS) con una aplicación con la que 
+        facilitemos la localización de las diferentes rutas de tránsito terrestre a nuestros 
+        hermanos dominicanos y extranjeros transeúntes para mejor ubicación a la hora 
+        de salir de casa, del trabajo, de la universidad o simplemente salir a dar una pequeña vuelta. 
+                </p>
+            </div>
+
+            <div id="privacy">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. 
+              Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                </p>
+
+                <p>
+                    Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. 
+              Aenean dignissim pellentesque felis.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="panel">
+
+        <div id="content-footer" class="content">
+            <div class="text-center">
+                <a href="#">Acerca de</a>
+                <a href="#">Ayuda</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Términos y Condiciones</a>
+            </div>
+        </div>
+
+        <span class="clearfix">VGExplorer Web v1.0 | 2014</span>
+        <span class="text-center">Copyright © <a href="#">Corderoski</a>. Todos los derechos reservados.</span>
+    </footer>
+
+    @Scripts.Render("~/bundles/js")
+    <script>
+
+        $("document").ready(function () {
+            $("#fileControl").change(function LoadAndShow(e) {
+
+                $('#fileForm').submit();
+
+            });
+        });
+    </script>
+</body>
+</html>
