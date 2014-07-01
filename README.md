@@ -35,7 +35,11 @@ Sólo se requieren descargar los fuentes.
 Descargados, se podrá compilar sin ninguna incidencia.
 De haber una, podría ser acerca del 'Signing' y el certificado para la firma de la aplicación (que no está versionado).
 
-El proyecto está en una solución Visual Studio 2012 y actualmente contiene dos proyectos: Uno es el aplicativo Win32, el otro es un proyecto web para un visor de los archivos (*.vge) sobre JavaScript.
+### Acerca del proyecto ###
+
+Solución Visual Studio 2012:
+*Aplicativo Win32
+*MVC Web Viewer (*.vge)
 
 
 ### Licencia ###

@@ -6,13 +6,13 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
     <title>VGExplorador - Web</title>
     @Styles.Render("~/Default/css")
     @Styles.Render("~/Content/css")
+
     <!-- Additional settings -->
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
-
+    <link href="~/Content/jquery.treeview.css" rel="stylesheet" />
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -21,18 +21,21 @@
         #viewer {
             margin: 0 0 0 0;
             padding: 0 0 0 0;
-            width: 100%;
-            height: 480px;
-            background-color: lightblue;
+            width: 99%;
+            min-height: 120px;
+            height: 99%;
+            border-color: darkblue;
+            border-radius: 1px;
+            border-style: groove;
+            border-width: 2px;
+            /*background-color: lightblue;*/
         }
 
         .loader {
             width: 12%;
         }
     </style>
-
 </head>
-
 
 <body>
     <header style="clear: both; margin-bottom: 5%;">
@@ -65,15 +68,18 @@
                 <label for="fileControl" class="input-control">
                     Cargar Archivo
                 </label>
-                <input id="fileControl" name="fileControl" class="input-control" type="file" value="Cargar" />
-                <div id="viewer">
+                <input id="fileControl" name="fileControl" class="file" type="file" />
+                <div id="viewer" class="filetree">
                     @if (ViewBag.Data == null)
                     {
-                        <span>null</span>
+                        <input type="hidden" value="no-data"/>
+                        <div class="text-center">
+                            <label class="label label-primary">Working Schema en blanco.</label>
+                        </div>
                     }
                     else
                     {
-                        <span>not null</span>
+                        @MvcHtmlString.Create(ViewBag.Data)
                     }
                 </div>
             }
@@ -82,7 +88,7 @@
         <div class="container">
             <h2>Virtual Ghost Explorer - Web</h2>
 
-            <div id="content-1" class="content">
+            <div class="content">
                 <p>
                     Consiste en una herramienta que permite compartir las estructuras de las carpetas sin el inconveniente del peso de la carpeta y sin accesos remotos.
                 </p>
@@ -118,56 +124,62 @@
                 </div>
             </div>
 
-
             <div id="about">
                 <h2>Acerca de</h2>
                 <p>
                     Éste proyecto surge con la iniciativa de dotar el mercado de aplicaciones de diferentes plataformas
-        (Windows Phone, Android, BlackBerry 10 & iOS) con una aplicación con la que 
-        facilitemos la localización de las diferentes rutas de tránsito terrestre a nuestros 
-        hermanos dominicanos y extranjeros transeúntes para mejor ubicación a la hora 
-        de salir de casa, del trabajo, de la universidad o simplemente salir a dar una pequeña vuelta. 
+                    (Windows Phone, Android, BlackBerry 10 & iOS) con una aplicación con la que 
+                    facilitemos la localización de las diferentes rutas de tránsito terrestre a nuestros 
+                    hermanos dominicanos y extranjeros transeúntes para mejor ubicación a la hora 
+                    de salir de casa, del trabajo, de la universidad o simplemente salir a dar una pequeña vuelta. 
+                </p>
+            </div>
+
+            <div id="help">
+                <h2>Ayuda</h2>
+                <p>
+                    Limitaciones de VGE Web: Los archivos *.vge cargan la página y el consumo en memoria del navegador. 
+                    La diferencia debe ser notable a partir de los 1.5MB por lo que se recomiendan visualizar menores de 2MB.
+                    De requerir visualizar archivos mayores, utilizar las versiones de plataforma.
                 </p>
             </div>
 
             <div id="privacy">
+                 <h2>Privacidad y Términos de Uso</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. 
-              Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                    Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
                 </p>
-
                 <p>
                     Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. 
-              Aenean dignissim pellentesque felis.
+                    Aenean dignissim pellentesque felis.
                 </p>
             </div>
-
         </div>
     </section>
 
     <footer class="panel">
-
         <div id="content-footer" class="content">
             <div class="text-center">
-                <a href="#">Acerca de</a>
-                <a href="#">Ayuda</a>
-                <a href="#">Privacidad</a>
+                <a href="#about">Acerca de</a>
+                <a href="#help">Ayuda</a>
+                <a href="#privacy">Privacidad</a>
                 <a href="#">Términos y Condiciones</a>
             </div>
         </div>
 
-        <span class="clearfix">VGExplorer Web v1.0 | 2014</span>
+        <span class="clearfix">Virtual Ghost Explorer Web v0.9 | 2014</span>
         <span class="text-center">Copyright © <a href="#">Corderoski</a>. Todos los derechos reservados.</span>
     </footer>
 
     @Scripts.Render("~/bundles/js")
+    <script src="~/Scripts/jquery.treeview.js"></script>
     <script>
-
         $("document").ready(function () {
-            $("#fileControl").change(function LoadAndShow(e) {
+            $("#viewer ul").treeview();
 
+            $("#fileControl").change(function (e) {
                 $('#fileForm').submit();
-
             });
         });
     </script>
