@@ -34,6 +34,21 @@ namespace VGExplorerTool.Helpers
         }
 
 
+        public static String GetFileSizeString(long size)
+        {
+            string[] sizes = { "B", "KB", "MB", "GB" };
+            int order = 0;
+            while (size >= 1024 && order + 1 < sizes.Length)
+            {
+                order++;
+                size = size / 1024;
+            }
+
+            return String.Format("{0} {1}", size, sizes[order]);
+        }
+
+
+
         /// <summary>
         /// 
         /// </summary>
