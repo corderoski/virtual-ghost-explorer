@@ -14,11 +14,9 @@ namespace VGExplorerTool.Forms
 
         ICollection<NodeString> _nodeString;
 
-        ImageList _imageList;
+        readonly ImageList _imageList;
 
-        private bool _showNodeInfo = false;
-
-        Entities.Configuration _appConfiguration;
+        bool _showNodeInfo;
 
         public FileCreator()
         {
@@ -28,9 +26,8 @@ namespace VGExplorerTool.Forms
             _imageList.Images.Add(Properties.Resources.text, Color.Transparent);
 
             _nodeString = new Collection<NodeString>();
-            //-_appConfiguration = FileHelper.GetAppConfiguration();
+            //-Entities.Configuration _appConfiguration = FileHelper.GetAppConfiguration();
         }
-
 
         #region Components Events
 
@@ -52,6 +49,8 @@ namespace VGExplorerTool.Forms
 
             e.DrawDefault = true;
         }
+        
+        #endregion
 
         #region Menu Items
 
@@ -103,9 +102,10 @@ namespace VGExplorerTool.Forms
                 if (dResult != System.Windows.Forms.DialogResult.OK)
                     return;
 
+                CleanObjects();
+
                 var result = Factory.NodeStringFactory.CreateNodeString(folderDialog.SelectedPath);
 
-                CleanObjects();
                 itemTreeView.Nodes.Add(PaintNodes(result));
                 _nodeString.Add(result);
                 //
@@ -185,6 +185,7 @@ namespace VGExplorerTool.Forms
                 CleanObjects();
             else
                 DeleteObject(selection);
+            itemTreeView.SelectedNode = null;
         }
 
         private void showInfoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -224,10 +225,6 @@ namespace VGExplorerTool.Forms
 
         #endregion
 
-
-        #endregion
-
-
         #region Functions
 
         private void CleanObjects()
@@ -235,7 +232,6 @@ namespace VGExplorerTool.Forms
             itemTreeView.Nodes.Clear();
             _nodeString.Clear();
         }
-
 
         private void DeleteObject(TreeNode node)
         {
@@ -288,12 +284,13 @@ namespace VGExplorerTool.Forms
                 var innerChild = new TreeNode
                 {
                     Name = child.Name,
-                    Text = _showNodeInfo && child.Type == NodeStringType.File && !String.IsNullOrEmpty(node.Size) ?
-                        String.Format("{0} [{1}]", child.Name, child.Size) : child.Name,
                     Tag = child,
                     ImageIndex = (int)child.Type,
                     SelectedImageIndex = (int)child.Type,
                 };
+                innerChild.Text = _showNodeInfo && child.Type == NodeStringType.File
+                    && !String.IsNullOrEmpty(child.Size) ?
+                                      String.Format("{0} [{1}]", child.Name, child.Size) : child.Name;
 
                 if (child.Childs.Count > 0)
                 {
@@ -312,9 +309,6 @@ namespace VGExplorerTool.Forms
         }
 
         #endregion
-
-
-
 
     }
 }

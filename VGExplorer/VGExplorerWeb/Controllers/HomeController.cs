@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace VGExplorerWeb.Controllers
@@ -19,22 +18,46 @@ namespace VGExplorerWeb.Controllers
         {
             if (Request != null)
             {
-                HttpPostedFileBase file = Request.Files["fileControl"];
+                var file = Request.Files["fileControl"];
 
                 if ((file != null) && (file.ContentLength > 0) && !String.IsNullOrEmpty(file.FileName))
                 {
-                    BinaryReader reader = new BinaryReader(file.InputStream);
+                    var reader = new BinaryReader(file.InputStream);
                     byte[] bytes = reader.ReadBytes((int)file.InputStream.Length);
                     //  to string
                     string result = System.Text.Encoding.UTF8.GetString(bytes);
                     //  conversion + output
                     var nodeString = DeserializeNodeStringArray(result);
-                    ViewBag.Data = nodeString;
+                    ViewBag.Data = CreateHtmlListStructure(nodeString);
+                    ViewBag.IsData = true;
                 }
             }
             return View();
         }
 
+        private string CreateHtmlListStructure(IEnumerable<NodeString> nodes)
+        {
+            var sb = new System.Text.StringBuilder();
+            sb.AppendLine("<ul>");
+
+            foreach (var nodeString in nodes)
+            {
+                string li;
+                if (nodeString.Childs.Any())
+                {
+                    li = "<li>" +
+                    "<span class='folder'>" + nodeString.Name + "</span>" +
+                     CreateHtmlListStructure(nodeString.Childs) + "</li>";
+                }
+                else
+                {
+                    li = "<li>" + String.Format("<span class='file'>{0}</span>", nodeString.Name) + "</li>";
+                }
+                sb.AppendLine(li);
+            }
+            sb.AppendLine("</ul>");
+            return sb.ToString();
+        }
 
         private static IEnumerable<NodeString> DeserializeNodeStringArray(String nodeStringContent)
         {
@@ -42,7 +65,7 @@ namespace VGExplorerWeb.Controllers
             {
                 return JsonConvert.DeserializeObject<IEnumerable<NodeString>>(nodeStringContent);
             }
-            catch (JsonSerializationException)
+            catch (Exception)
             {
                 //TODO: Handle this Exception
                 return null;

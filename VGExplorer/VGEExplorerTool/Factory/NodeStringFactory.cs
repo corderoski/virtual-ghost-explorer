@@ -36,7 +36,7 @@ namespace VGExplorerTool.Factory
 
                 try
                 {
-                    if (itemNode.GetFiles().Count() > 0 || itemNode.GetDirectories().Count() > 0)
+                    if (itemNode.GetFiles().Any() || itemNode.GetDirectories().Any())
                         childs = CreateNodeString(itemNode.FullName);
                 }
                 catch
@@ -105,11 +105,10 @@ namespace VGExplorerTool.Factory
             }
 
             var itemsWithChilds = source.Where(p => p.Childs.Any());
-            foreach (var item in itemsWithChilds)
+            foreach (var result in itemsWithChilds
+                .Select(item => Delete(item.Childs, delObject)).Where(result => result != null))
             {
-                var result = Delete(item.Childs, delObject);
-                if (result != null)
-                    return result;
+                return result;
             }
             return source;
         }

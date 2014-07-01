@@ -38,16 +38,19 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>E1D345FD2309C26927693A8C4480A0A95F807274</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>060E5D263F6B9ADFFA692F4FB76DB01EBDD7C38E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>VGExplorerTool_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Apps_Freeware_AssemblyKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\logo_win.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Apps_Freeware_AssemblyKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -112,8 +115,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Apps_Freeware_AssemblyKey.pfx" />
     <None Include="packages.config" />
-    <None Include="VGExplorerTool_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\action_save.gif" />

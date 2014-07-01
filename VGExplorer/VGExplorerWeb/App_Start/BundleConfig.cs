@@ -12,12 +12,6 @@ namespace VGExplorerWeb
                         "~/Scripts/jquery-{version}.js",
                         "~/Scripts/bootstrap*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
-                        "~/Scripts/jquery-ui-{version}.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
-
             bundles.Add(new StyleBundle("~/Default/css").Include(
                                 "~/Content/themes/Default/bootstrap*"));
 
