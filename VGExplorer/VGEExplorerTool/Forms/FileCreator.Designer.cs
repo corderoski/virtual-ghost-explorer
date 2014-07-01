@@ -41,6 +41,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -152,7 +153,8 @@
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clearToolStripMenuItem});
+            this.clearToolStripMenuItem,
+            this.showInfoToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "&Edit";
@@ -161,9 +163,19 @@
             // 
             this.clearToolStripMenuItem.Image = global::VGExplorerTool.Properties.Resources.data_delete;
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.clearToolStripMenuItem.Text = "Clear / Delete";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
+            // 
+            // showInfoToolStripMenuItem
+            // 
+            this.showInfoToolStripMenuItem.Image = global::VGExplorerTool.Properties.Resources.text;
+            this.showInfoToolStripMenuItem.Name = "showInfoToolStripMenuItem";
+            this.showInfoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
+            this.showInfoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.showInfoToolStripMenuItem.Text = "Show / Hide Info";
+            this.showInfoToolStripMenuItem.ToolTipText = "Shows some extra information.";
+            this.showInfoToolStripMenuItem.Click += new System.EventHandler(this.showInfoToolStripMenuItem_Click);
             // 
             // optionsToolStripMenuItem
             // 
@@ -277,5 +289,6 @@
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configurationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createSchemaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showInfoToolStripMenuItem;
     }
 }

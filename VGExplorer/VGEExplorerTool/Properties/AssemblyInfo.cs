@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("VGExplorer Win32 Tool")]
-[assembly: AssemblyDescription("VGExplorer is a lite tool for sharing folders structures (views). Your buddy can see your animes, music or the saved episodes from a TV Show.")]
+[assembly: AssemblyDescription("VGExplorer is a lite tool for sharing folders structures (views). Your buddy can see your animes, music or the saved episodes from a TV Show.\r\n\r\n  - Corderoski.com has a web viewer!")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Corderoski")]
 [assembly: AssemblyProduct("Virtual Ghost Explorer")]

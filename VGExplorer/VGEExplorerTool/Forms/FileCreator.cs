@@ -16,6 +16,8 @@ namespace VGExplorerTool.Forms
 
         ImageList _imageList;
 
+        private bool _showNodeInfo = false;
+
         Entities.Configuration _appConfiguration;
 
         public FileCreator()
@@ -29,7 +31,7 @@ namespace VGExplorerTool.Forms
             //-_appConfiguration = FileHelper.GetAppConfiguration();
         }
 
-        
+
         #region Components Events
 
         private void FileCreator_Load(object sender, EventArgs e)
@@ -48,7 +50,7 @@ namespace VGExplorerTool.Forms
         {
             Font font = itemTreeView.Font;
 
-            e.DrawDefault = true;           
+            e.DrawDefault = true;
         }
 
         #region Menu Items
@@ -182,11 +184,20 @@ namespace VGExplorerTool.Forms
             if (selection == null)
                 CleanObjects();
             else
-                DeleteObject();
+                DeleteObject(selection);
+        }
+
+        private void showInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _showNodeInfo = !_showNodeInfo;
+            itemTreeView.Nodes.Clear();
+            foreach (var item in _nodeString)
+                itemTreeView.Nodes.Add(PaintNodes(item));
         }
 
         private void configurationToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            throw new NotImplementedException();
             /*
              * No need for using configurations yet.
             var frm = new Configuration();
@@ -200,7 +211,7 @@ namespace VGExplorerTool.Forms
 
         private void contactToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://bitbucket.org/jcordero/virtual-ghost-explorer");
+            System.Diagnostics.Process.Start("http://corderoski.com/apps/");
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -212,7 +223,7 @@ namespace VGExplorerTool.Forms
         }
 
         #endregion
-        
+
 
         #endregion
 
@@ -226,9 +237,12 @@ namespace VGExplorerTool.Forms
         }
 
 
-        private void DeleteObject()
+        private void DeleteObject(TreeNode node)
         {
-            throw new NotImplementedException();
+            var result = Factory.NodeStringFactory.Delete(_nodeString, node.Tag as NodeString);
+            _nodeString = result as IList<NodeString>;
+
+            itemTreeView.Nodes.Remove(node);
         }
 
         [Obsolete]
@@ -256,14 +270,15 @@ namespace VGExplorerTool.Forms
             }
             return result;
         }
-        
+
         private TreeNode PaintNodes(NodeString node)
         {
             var parent = new TreeNode
             {
                 Name = node.Name,
-                Text = node.Name,
-                Tag = node.Type,
+                Text = _showNodeInfo && node.Type == NodeStringType.File && !String.IsNullOrEmpty(node.Size) ?
+                    String.Format("{0} [{1}]", node.Name, node.Size) : node.Name,
+                Tag = node,
                 ImageIndex = (int)node.Type,
                 SelectedImageIndex = (int)node.Type,
             };
@@ -273,8 +288,9 @@ namespace VGExplorerTool.Forms
                 var innerChild = new TreeNode
                 {
                     Name = child.Name,
-                    Text = child.Name,
-                    Tag = child.Type,
+                    Text = _showNodeInfo && child.Type == NodeStringType.File && !String.IsNullOrEmpty(node.Size) ?
+                        String.Format("{0} [{1}]", child.Name, child.Size) : child.Name,
+                    Tag = child,
                     ImageIndex = (int)child.Type,
                     SelectedImageIndex = (int)child.Type,
                 };
@@ -296,6 +312,8 @@ namespace VGExplorerTool.Forms
         }
 
         #endregion
+
+
 
 
     }

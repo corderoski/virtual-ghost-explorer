@@ -25,11 +25,10 @@ namespace VGExplorerWeb.Controllers
                 {
                     BinaryReader reader = new BinaryReader(file.InputStream);
                     byte[] bytes = reader.ReadBytes((int)file.InputStream.Length);
-
+                    //  to string
                     string result = System.Text.Encoding.UTF8.GetString(bytes);
-
+                    //  conversion + output
                     var nodeString = DeserializeNodeStringArray(result);
-
                     ViewBag.Data = nodeString;
                 }
             }

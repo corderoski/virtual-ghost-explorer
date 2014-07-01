@@ -37,9 +37,7 @@ namespace VGExplorerTool.Factory
                 try
                 {
                     if (itemNode.GetFiles().Count() > 0 || itemNode.GetDirectories().Count() > 0)
-                    {
                         childs = CreateNodeString(itemNode.FullName);
-                    }
                 }
                 catch
                 {
@@ -54,8 +52,10 @@ namespace VGExplorerTool.Factory
                 var childs = new NodeString
                 {
                     Name = itemNode.Name,
-                    Type = NodeStringType.File
+                    Type = NodeStringType.File,
+                    Size = VGExplorerTool.Helpers.FileHelper.GetFileSizeString(itemNode.Length)
                 };
+
                 result.Childs.Add(childs);
             }
             return result;
@@ -89,6 +89,31 @@ namespace VGExplorerTool.Factory
 
         }
 
+        /// <summary>
+        /// Deletes an object from the passed source.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="delObject">the NodeString to delete</param>
+        /// <returns>a NodeString List without the indicated objects if found, otherwise, same passed list.</returns>
+        public static IEnumerable<NodeString> Delete(IEnumerable<NodeString> source, NodeString delObject)
+        {
+            if (source.Contains(delObject))
+            {
+                var tempList = source.ToList();
+                tempList.Remove(delObject);
+                return tempList;
+            }
+
+            var itemsWithChilds = source.Where(p => p.Childs.Any());
+            foreach (var item in itemsWithChilds)
+            {
+                var result = Delete(item.Childs, delObject);
+                if (result != null)
+                    return result;
+            }
+            return source;
+        }
 
     }
+
 }
