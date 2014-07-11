@@ -10,7 +10,7 @@ La finalidad es poder compartir con otros las estructuras de nuestras carpetas (
 * VGExplorer Tool
 * v 1.0
 
-Web: [http://www.corderoski.com/VGExplorer/Home](http://www.corderoski.com/VGExplorer/Home)
+Web: [http://www.corderoski.com/Apps](http://www.corderoski.com/Apps)
 
 ** Distribuciones / Aplicativos: ** http://www.softpedia.com/get/System/File-Management/Virtual-Ghost-Explorer.shtml
 
