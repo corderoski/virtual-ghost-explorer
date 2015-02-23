@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VGExplorerTool</RootNamespace>
     <AssemblyName>VGExplorerTool</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,10 +54,6 @@
     <AssemblyOriginatorKeyFile>Apps_Freeware_AssemblyKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net35\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -68,19 +65,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Configuration.cs" />
-    <Compile Include="Entities\NodeString.cs" />
     <Compile Include="Forms\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Configuration.cs">
+    <Compile Include="Forms\Configurations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Configuration.Designer.cs">
-      <DependentUpon>Configuration.cs</DependentUpon>
+    <Compile Include="Forms\Configurations.Designer.cs">
+      <DependentUpon>Configurations.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FileCreator.cs">
       <SubType>Form</SubType>
@@ -88,17 +83,15 @@
     <Compile Include="Forms\FileCreator.Designer.cs">
       <DependentUpon>FileCreator.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\FileHelper.cs" />
-    <Compile Include="Factory\NodeStringFactory.cs" />
     <Compile Include="Helpers\ResourcesHelper.cs" />
-    <Compile Include="Helpers\JsonHelper.cs" />
+    <Compile Include="Helpers\TreeNodesHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Configuration.resx">
-      <DependentUpon>Configuration.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Configurations.resx">
+      <DependentUpon>Configurations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FileCreator.resx">
       <DependentUpon>FileCreator.cs</DependentUpon>
@@ -115,10 +108,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Apps_Freeware_AssemblyKey.pfx" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\action_save.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -159,6 +153,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\list_settings.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VGExplorer.Framework\VGExplorer.Framework.csproj">
+      <Project>{647cfe57-c6f1-4cbf-ade2-9c3b26b2536c}</Project>
+      <Name>VGExplorer.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

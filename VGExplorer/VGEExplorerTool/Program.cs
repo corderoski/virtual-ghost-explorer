@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace VGExplorerTool
@@ -18,7 +16,7 @@ namespace VGExplorerTool
             Application.Run(new Forms.FileCreator());
         }
 
-        internal const String AppName = "Virtual Ghost Explorer";
+        internal const String APP_NAME = "Virtual Ghost Explorer";
 
     }
 }
