@@ -4,7 +4,8 @@ using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using VGExplorerTool.Entities;
+using VGExplorer.Framework.Entities;
+using VGExplorer.Framework.Helpers;
 using VGExplorerTool.Helpers;
 
 namespace VGExplorerTool.Forms
@@ -12,7 +13,7 @@ namespace VGExplorerTool.Forms
     public partial class FileCreator : Form
     {
 
-        ICollection<NodeString> _nodeString;
+        readonly ICollection<NodeString> _nodeString;
 
         readonly ImageList _imageList;
 
@@ -26,26 +27,26 @@ namespace VGExplorerTool.Forms
             _imageList.Images.Add(Properties.Resources.text, Color.Transparent);
 
             _nodeString = new Collection<NodeString>();
-            //-Entities.Configuration _appConfiguration = FileHelper.GetAppConfiguration();
+            //-Entities.Configurations _appConfiguration = FileHelper.GetAppConfiguration();
         }
 
         #region Components Events
 
         private void FileCreator_Load(object sender, EventArgs e)
         {
-            this.optionsToolStripMenuItem.Visible = false;  //  for next deploy
+            optionsToolStripMenuItem.Visible = false;  //  for next deploy
             //
-            this.Text = Program.AppName;
-            this.Icon = Helpers.ResourcesHelper.GetAppIcon();
+            Text = Program.APP_NAME;
+            Icon = ResourcesHelper.GetAppIcon();
             //
             itemTreeView.ImageList = _imageList;
             itemTreeView.Font = new Font("Tahoma", 8, FontStyle.Regular);
-            this.itemTreeView.DrawMode = TreeViewDrawMode.OwnerDrawAll;
+            itemTreeView.DrawMode = TreeViewDrawMode.OwnerDrawAll;
         }
 
         private void itemTreeView_DrawNode(object sender, DrawTreeNodeEventArgs e)
         {
-            Font font = itemTreeView.Font;
+            var font = itemTreeView.Font;
 
             e.DrawDefault = true;
         }
@@ -64,7 +65,7 @@ namespace VGExplorerTool.Forms
                 openFileDialog.Multiselect = false;
                 openFileDialog.RestoreDirectory = true;
                 openFileDialog.ValidateNames = true;
-                openFileDialog.Filter = FileHelper.VGEFileFilter;
+                openFileDialog.Filter = FileHelper.VGE_FILE_FILTER;
                 //  Operation
                 var dResult = openFileDialog.ShowDialog(this);
                 if (dResult != System.Windows.Forms.DialogResult.OK)
@@ -76,7 +77,7 @@ namespace VGExplorerTool.Forms
                 if (result == null)
                 {
                     MessageBox.Show(this, "The indicated file is empty. Virtual Exploring can't be loaded.",
-                        Program.AppName + " - Error",
+                        Program.APP_NAME + " - Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
@@ -84,7 +85,7 @@ namespace VGExplorerTool.Forms
                 CleanObjects();
                 foreach (var resultItem in result)
                 {
-                    itemTreeView.Nodes.Add(PaintNodes(resultItem));
+                    itemTreeView.Nodes.Add(TreeNodesHelper.PaintNodes(resultItem, _showNodeInfo));
                     _nodeString.Add(resultItem);
                 }
                 //
@@ -99,17 +100,17 @@ namespace VGExplorerTool.Forms
                 folderDialog.ShowNewFolderButton = true;
                 var dResult = folderDialog.ShowDialog(this);
 
-                if (dResult != System.Windows.Forms.DialogResult.OK)
+                if (dResult != DialogResult.OK)
                     return;
 
                 CleanObjects();
 
-                var result = Factory.NodeStringFactory.CreateNodeString(folderDialog.SelectedPath);
+                var result = VGExplorer.Framework.Factory.NodeStringFactory.CreateNodeString(folderDialog.SelectedPath);
 
-                itemTreeView.Nodes.Add(PaintNodes(result));
+                itemTreeView.Nodes.Add(TreeNodesHelper.PaintNodes(result, _showNodeInfo));
                 _nodeString.Add(result);
                 //
-                this.ShowOperationCompletedMessage();
+                ShowOperationCompletedMessage();
             }
         }
 
@@ -120,15 +121,15 @@ namespace VGExplorerTool.Forms
                 folderDialog.ShowNewFolderButton = true;
                 var dResult = folderDialog.ShowDialog(this);
 
-                if (dResult != System.Windows.Forms.DialogResult.OK)
+                if (dResult != DialogResult.OK)
                     return;
 
-                var result = Factory.NodeStringFactory.CreateNodeString(folderDialog.SelectedPath);
+                var result = VGExplorer.Framework.Factory.NodeStringFactory.CreateNodeString(folderDialog.SelectedPath);
 
-                itemTreeView.Nodes.Add(PaintNodes(result));
+                itemTreeView.Nodes.Add(TreeNodesHelper.PaintNodes(result, _showNodeInfo));
                 _nodeString.Add(result);
                 //
-                this.ShowOperationCompletedMessage();
+                ShowOperationCompletedMessage();
             }
         }
 
@@ -141,17 +142,17 @@ namespace VGExplorerTool.Forms
                 saveFolderDialog.ValidateNames = true;
                 saveFolderDialog.AddExtension = true;
                 saveFolderDialog.OverwritePrompt = true;
-                saveFolderDialog.Filter = FileHelper.VGEFileFilter;
+                saveFolderDialog.Filter = FileHelper.VGE_FILE_FILTER;
 
                 var dResult = saveFolderDialog.ShowDialog(this);
 
-                if (dResult != System.Windows.Forms.DialogResult.OK)
+                if (dResult != DialogResult.OK)
                     return;
 
                 var content = JsonHelper.Serialize(_nodeString);
                 FileHelper.SaveStream(saveFolderDialog.FileName, content);
                 //
-                this.ShowOperationCompletedMessage();
+                ShowOperationCompletedMessage();
             }
         }
 
@@ -164,10 +165,10 @@ namespace VGExplorerTool.Forms
                 //
                 var dResult = folderDialog.ShowDialog(this);
 
-                if (dResult != System.Windows.Forms.DialogResult.OK)
+                if (dResult != DialogResult.OK)
                     return;
 
-                Factory.NodeStringFactory.CreateFolderSchema(folderDialog.SelectedPath, _nodeString);
+                VGExplorer.Framework.Factory.NodeStringFactory.CreateFolderSchema(folderDialog.SelectedPath, _nodeString);
                 //
                 this.ShowOperationCompletedMessage();
             }
@@ -184,7 +185,7 @@ namespace VGExplorerTool.Forms
             if (selection == null)
                 CleanObjects();
             else
-                DeleteObject(selection);
+                TreeNodesHelper.DeleteObject(itemTreeView, _nodeString, selection);
             itemTreeView.SelectedNode = null;
         }
 
@@ -193,7 +194,7 @@ namespace VGExplorerTool.Forms
             _showNodeInfo = !_showNodeInfo;
             itemTreeView.Nodes.Clear();
             foreach (var item in _nodeString)
-                itemTreeView.Nodes.Add(PaintNodes(item));
+                itemTreeView.Nodes.Add(TreeNodesHelper.PaintNodes(item, _showNodeInfo));
         }
 
         private void configurationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -201,7 +202,7 @@ namespace VGExplorerTool.Forms
             throw new NotImplementedException();
             /*
              * No need for using configurations yet.
-            var frm = new Configuration();
+            var frm = new Configurations();
             var dResult = frm.ShowDialog(this);
             if (dResult == System.Windows.Forms.DialogResult.OK)
             {
@@ -212,12 +213,12 @@ namespace VGExplorerTool.Forms
 
         private void contactToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://corderoski.com/apps/");
+            System.Diagnostics.Process.Start("http://corderoski.com/");
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (var aBox = new Forms.AboutBox())
+            using (var aBox = new AboutBox())
             {
                 aBox.ShowDialog(this);
             }
@@ -233,78 +234,9 @@ namespace VGExplorerTool.Forms
             _nodeString.Clear();
         }
 
-        private void DeleteObject(TreeNode node)
-        {
-            var result = Factory.NodeStringFactory.Delete(_nodeString, node.Tag as NodeString);
-            _nodeString = result as IList<NodeString>;
-
-            itemTreeView.Nodes.Remove(node);
-        }
-
-        [Obsolete]
-        private NodeString GetNodeString(TreeNode node)
-        {
-            var result = new NodeString
-            {
-                Name = node.Name,
-                Type = node.GetNodeCount(true) > 0 ? NodeStringType.Folder : NodeStringType.File
-            };
-
-            foreach (var treeNode in node.Nodes.OfType<TreeNode>())
-            {
-                var childs = new NodeString
-                {
-                    Name = treeNode.Name,
-                    Type = node.GetNodeCount(true) > 0 ? NodeStringType.Folder : NodeStringType.File
-                };
-
-                if (treeNode.GetNodeCount(true) > 0)
-                {
-                    childs = GetNodeString(treeNode);
-                }
-                result.Childs.Add(childs);
-            }
-            return result;
-        }
-
-        private TreeNode PaintNodes(NodeString node)
-        {
-            var parent = new TreeNode
-            {
-                Name = node.Name,
-                Text = _showNodeInfo && node.Type == NodeStringType.File && !String.IsNullOrEmpty(node.Size) ?
-                    String.Format("{0} [{1}]", node.Name, node.Size) : node.Name,
-                Tag = node,
-                ImageIndex = (int)node.Type,
-                SelectedImageIndex = (int)node.Type,
-            };
-
-            foreach (var child in node.Childs)
-            {
-                var innerChild = new TreeNode
-                {
-                    Name = child.Name,
-                    Tag = child,
-                    ImageIndex = (int)child.Type,
-                    SelectedImageIndex = (int)child.Type,
-                };
-                innerChild.Text = _showNodeInfo && child.Type == NodeStringType.File
-                    && !String.IsNullOrEmpty(child.Size) ?
-                                      String.Format("{0} [{1}]", child.Name, child.Size) : child.Name;
-
-                if (child.Childs.Count > 0)
-                {
-                    innerChild = PaintNodes(child);
-                }
-
-                parent.Nodes.Add(innerChild);
-            }
-            return parent;
-        }
-
         private void ShowOperationCompletedMessage()
         {
-            MessageBox.Show(this, "The has operation been completed.", Program.AppName,
+            MessageBox.Show(this, "The has operation been completed.", Program.APP_NAME,
                 MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
