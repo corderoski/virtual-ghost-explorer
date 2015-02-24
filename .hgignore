@@ -3,3 +3,4 @@ syntax: glob
 */obj/
 VGExplorer/VGEExplorerTool/VGExplorerTool_TemporaryKey.pfx
 */Thumbs.db
+*.pfx

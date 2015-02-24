@@ -46,7 +46,7 @@ namespace VGExplorer.Framework.Entities
         public string ToLongString()
         {
             var size = "";
-            if (String.IsNullOrEmpty(Size))
+            if (!String.IsNullOrEmpty(Size))
                 size = String.Format(" - {0}", Size);
             return String.Format("{0} [{1}{2}]", Name, FormatHelper.GetFormattedDateTime(Date), size);
         }
