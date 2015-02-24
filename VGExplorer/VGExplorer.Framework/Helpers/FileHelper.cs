@@ -32,7 +32,7 @@ namespace VGExplorer.Framework.Helpers
         public static String GetFileSizeString(long size)
         {
             string[] sizes = { "B", "KB", "MB", "GB" };
-            int order = 0;
+            var order = 0;
             while (size >= 1024 && order + 1 < sizes.Length)
             {
                 order++;

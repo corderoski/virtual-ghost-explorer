@@ -50,8 +50,7 @@ namespace VGExplorerTool.Helpers
             var parent = new TreeNode
             {
                 Name = node.Name,
-                Text = showNodeInfo && node.Type == NodeStringType.File && !String.IsNullOrEmpty(node.Size)
-                ? node.ToLongString() : node.Name,
+                Text = showNodeInfo && node.Type == NodeStringType.File ? node.ToLongString() : node.Name,
                 Tag = node,
                 ImageIndex = (int)node.Type,
                 SelectedImageIndex = (int)node.Type,
@@ -65,13 +64,12 @@ namespace VGExplorerTool.Helpers
                     Tag = child,
                     ImageIndex = (int)child.Type,
                     SelectedImageIndex = (int)child.Type,
-                    Text = showNodeInfo && child.Type == NodeStringType.File
-                           && !String.IsNullOrEmpty(child.Size) ? child.ToLongString() : child.Name,
+                    Text = showNodeInfo && child.Type == NodeStringType.File ? child.ToLongString() : child.Name,
                 };
 
                 if (child.Childs.Count > 0)
                 {
-                    innerChild = PaintNodes(child);
+                    innerChild = PaintNodes(child, showNodeInfo);
                 }
 
                 parent.Nodes.Add(innerChild);
