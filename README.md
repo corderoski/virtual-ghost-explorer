@@ -8,11 +8,17 @@ La finalidad es poder compartir con otros las estructuras de nuestras carpetas (
 ## Virtual Ghost Explorer ##
 
 * VGExplorer Tool
-* v 1.0
+* v 1.0 
+
+
 
 Web: [http://www.corderoski.com/Apps](http://www.corderoski.com/Apps)
 
-** Distribuciones / Aplicativos: ** http://www.softpedia.com/get/System/File-Management/Virtual-Ghost-Explorer.shtml
+** Download: ** 
+
+http://www.softpedia.com/get/System/File-Management/Virtual-Ghost-Explorer.shtml
+
+http://sourceforge.net/projects/vgexplorer/
 
 
 ### Funciones ###
