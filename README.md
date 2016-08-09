@@ -1,8 +1,8 @@
 # README #
 
-Básicamente consiste en una herramienta que permite compartir las estructuras de las carpetas.
+Basically is a tool that allows sharing folder structures.
 
-La finalidad es poder compartir con otros las estructuras de nuestras carpetas (esquemas). Permitirle saber a un amigo si tenemos o no el álbum de un artista, la grabación del último episodio de una serie o sólo por hacer alarde de nuestras habilidades de organización XD
+The purpose is to share with other structures in folders (schemes). A friend let you know whether or not we have the album of an artist, recording the last episode of a series or just for flaunting our organizational skills XD
 
 
 ## Virtual Ghost Explorer ##
@@ -23,49 +23,52 @@ http://sourceforge.net/projects/vgexplorer/
 
 ### Funciones ###
 
-* Lectura (Ripping) de carpetas para creación de esquema
-* Visualización de carpetas y archivos de un esquema
-* Archivos propietarios (**.vge*) para la Exportación / Importación de esquemas
-* Creación de replica de esquemas (recrear estructura)
+* Reading (Ripping) folders for schema creation
+* Folder and file a scheme
+* Owners Files (**. Vge *) for the Export / Import schemes
+* Creating replica schema (re structure)
 
 
 ## Repositorio ##
 
 
-### Qué contiene? ###
+### What contains? ###
 
-* Código fuente en lenguaje C#
-* Carpeta de recursos (imágenes, íconos)
-
-
-### Cómo instalar repositorio? ###
-
-Sólo se requieren descargar los fuentes.
-Descargados, se podrá compilar sin ninguna incidencia.
-De haber una, podría ser acerca del 'Signing' y el certificado para la firma de la aplicación (que no está versionado).
-
-### Acerca del proyecto ###
-
-Solución Visual Studio 2012:
-*Aplicativo Win32
-*MVC Web Viewer (*.vge)
+* Source code in C#
+* Folder resources (images, icons)
 
 
-### Licencia ###
+### How to install? ###
 
-Éste repositorio y todo el contenido no creado y/o atribuido a terceros, está licenciado bajo la [Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/)
+Only require the source code.
+
+Downloaded, you can compile without issues.
+
+Having one, it could be about 'Signing' the certificate for the signing of the application (not versioned).
+
+### About the project ###
+
+Visual Studio 2012 Solution:
+
+* Win32 App
+* ASP.NET MVC Web Viewer (for read-only *.vge files)
+
+
+### License ###
+
+This repository and all content not created and / or attributed to third parties, is licensed under the [Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ![license_by-sa.png](https://bitbucket.org/repo/dgG8oL/images/2860542338-license_by-sa.png)
 
 
 
 
-## Contribuciones ##
+## Contributors ##
 
-A los Testers:
+Testers:
 
 * Oliver Portes
 * Eleazar López
 
-Íconos:
+Icons:
 http://www.famfamfam.com/lab/icons/mini/
