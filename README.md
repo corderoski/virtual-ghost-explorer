@@ -1,8 +1,8 @@
 # README #
 
-Basically is a tool that allows sharing folder structures.
+A straightforward and simple software utility that enables you to create a folder structure and share it with your friends with ease
 
-The purpose is to share with other structures in folders (schemes). A friend let you know whether or not we have the album of an artist, recording the last episode of a series or just for flaunting our organizational skills XD
+Can also come in handy in situations when you want to show files stored on your computer to your friend without actually sharing them or allowing remote access to your PC, let you friend to know whether or not you have the album of an artist, the last TV Show episode or just for flaunting your organizational skills XD
 
 
 ## Virtual Ghost Explorer ##
